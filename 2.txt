@@ -1,0 +1,30 @@
+WARMUP:
+
+1. Create a new Git/GitHub named flask_warmup
+2. Create a new local DB with the same name
+3. Configure your debugger, venv, .gitignore and install flask and mariadb
+4. Create a DB with the following:
+  4.1. author
+    4.1.1. id (PK)
+    4.1.2. name
+    4.1.3. date_of_birth
+  4.2. book
+    4.2.1. id (PK)
+    4.2.2. author_id (FK)
+    4.2.3. title
+    4.2.4. release_date
+    4.2.5. page_length
+    4.2.6. copies_sold
+5. Add at least 3 authors and 10 books into your DB
+6. Create a procedure that will return the author name and book title for all books in the DB
+7. Create a procedure that will return the author name, and count of books written
+8. Create a procedure that will return the title, release_date, page_length and copies_sold for the book with the most copies_sold
+9. Create a procedure that will return the author name for all authors in order of most books sold
+10. In your app.py, create the following flask endpoints:
+  10.1. GET "/api/books" that will return the result of the procedure in step 6 as JSON
+  10.2. GET "/api/books_authored" that will return the result of the procedure in step 7 as JSON
+  10.3. GET "/api/best_selling_book" that will return the result of the procedure in step 8 as JSON
+  10.4. GET "/api/best_selling_author" that will return the result of the procedure in step 9 as JSON
+11. Test each endpoint using Postman (you can do this as you are writing the endpoints)
+12. Take a full backup of the DB
+13. Add, commit and push your code
